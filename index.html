@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica ON — Odontologia Especializada em Salvador</title>
+  <meta name="description" content="Cuide do seu sorriso com quem é especialista. Tratamento odontológico completo em Salvador com atendimento humanizado. Agende sua avaliação de cortesia.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <!-- Google Ads & SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Clínica ON">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://onodontologia.com.br/clinica/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://onodontologia.com.br/clinica/">
+  <meta property="og:title" content="Clínica ON — Odontologia Especializada em Salvador">
+  <meta property="og:description" content="Cuide do seu sorriso com quem é especialista. Tratamento odontológico completo em Salvador com atendimento humanizado.">
+  <meta property="og:image" content="assets/banner.webp">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Clínica ON — Odontologia Especializada em Salvador">
+  <meta name="twitter:description" content="Cuide do seu sorriso com quem é especialista. Tratamento odontológico completo em Salvador.">
+  <meta name="twitter:image" content="assets/banner.webp">
+
+  <!-- Google Ads Tag -->
+  <meta name="google-site-verification" content="">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+
+  <!-- Skeleton loading -->
+  <style>
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: skeleton-shimmer 1.5s ease-in-out infinite;
+    }
+    @keyframes skeleton-shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    .skeleton-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .skeleton-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: skeleton-shimmer 1.5s ease-in-out infinite;
+      z-index: 1;
+      transition: opacity 0.4s ease;
+    }
+    .skeleton-img img {
+      position: relative;
+      z-index: 2;
+    }
+    .skeleton-img img.loaded + .skeleton-img::before,
+    .skeleton-img:has(img.loaded)::before {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              800: '#1e3a8a',
+              900: '#172554',
+            },
+            neutral: {
+              50: '#fafafa',
+              100: '#f5f5f5',
+              150: '#eeeeee',
+              200: '#e5e5e5',
+              300: '#d4d4d4',
+              400: '#a3a3a3',
+              500: '#737373',
+              600: '#525252',
+              700: '#404040',
+              800: '#262626',
+              900: '#171717',
+              950: '#0a0a0a',
+            },
+            accent: {
+              gold: '#c8a24e',
+              goldLight: '#f5ecd4',
+            }
+          },
+          fontSize: {
+            'display': ['clamp(2.5rem, 5vw, 4.5rem)', { lineHeight: '1.08', letterSpacing: '-0.03em' }],
+            'heading': ['clamp(2rem, 3.5vw, 3rem)', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
+            'subheading': ['clamp(1.25rem, 2vw, 1.5rem)', { lineHeight: '1.35', letterSpacing: '-0.01em' }],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+            '30': '7.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '2rem',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --brand: #2563eb;
+      --brand-light: #eff6ff;
+      --text-primary: #171717;
+      --text-secondary: #525252;
+      --text-muted: #a3a3a3;
+      --surface: #ffffff;
+      --surface-elevated: #fafafa;
+      --border: #e5e5e5;
+      --border-light: #f0f0f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--surface); color: var(--text-primary); overflow-x: hidden; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #a3a3a3; }
+
+    /* ===== LAYOUT ===== */
+    .section-padding { padding: clamp(3rem, 6vw, 7rem) 0; }
+    .container-main { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem); }
+
+    /* ===== GLASS CARD ===== */
+    .glass-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(37, 99, 235, 0.2);
+      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.08);
+      transform: translateY(-4px);
+    }
+
+    /* ===== ANIMATED BORDER ===== */
+    .animated-border {
+      position: relative;
+    }
+    .animated-border::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+      background: linear-gradient(135deg, var(--brand), #60a5fa, #93c5fd, var(--brand));
+      background-size: 300% 300%;
+      animation: borderGlow 5s ease infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    @keyframes borderGlow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 0.875rem 1.75rem;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      line-height: 1.4;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%);
+      background-size: 250% 100%;
+      animation: btnShine 3s ease-in-out infinite;
+    }
+    @keyframes btnShine {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+    }
+    .btn-primary-lg {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.9375rem;
+      padding: 0.875rem 1.75rem;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+      transform: translateY(-1px);
+    }
+
+    /* ===== CTA PULSE ===== */
+    .cta-pulse {
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.35); }
+      50% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); }
+    }
+
+    /* ===== TEXT ===== */
+    .text-gradient {
+      background: linear-gradient(135deg, #2563eb, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #c8a24e, #e8d08a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .label-text {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    /* ===== DIVIDER ===== */
+    .divider-subtle {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    /* ===== REVEAL ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-left.active { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-right.active { opacity: 1; transform: translateX(0); }
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-scale.active { opacity: 1; transform: scale(1); }
+    .stagger > * { transition-delay: calc(var(--i, 0) * 100ms); }
+
+    /* ===== HERO ENTRANCE ===== */
+    .hero-fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes heroFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-fade-up-1 { animation-delay: 0.1s; }
+    .hero-fade-up-2 { animation-delay: 0.25s; }
+    .hero-fade-up-3 { animation-delay: 0.4s; }
+    .hero-fade-up-4 { animation-delay: 0.55s; }
+    .hero-fade-up-5 { animation-delay: 0.7s; }
+
+    /* ===== NAVBAR ===== */
+    .nav-transparent {
+      background: transparent;
+      border-bottom: 1px solid transparent;
+    }
+    .nav-scrolled {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border-bottom: 1px solid var(--border) !important;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+    }
+    .nav-scrolled .nav-link { color: #525252 !important; }
+    .nav-scrolled .nav-link:hover { color: #171717 !important; }
+
+    /* ===== MOBILE MENU ===== */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+
+    /* ===== FLOAT BADGE ===== */
+    .float-badge {
+      animation: floatBadge 4s ease-in-out infinite;
+    }
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* ===== COUNTER ===== */
+    .counter-num { font-variant-numeric: tabular-nums; }
+
+    /* ===== BEFORE/AFTER ===== */
+    .ba-slider {
+      position: relative;
+      overflow: hidden;
+      cursor: col-resize;
+      border-radius: 1rem;
+    }
+    .ba-slider .ba-before {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .ba-slider .ba-divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--brand);
+      z-index: 10;
+      cursor: col-resize;
+    }
+    .ba-slider .ba-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 11;
+      box-shadow: 0 2px 16px rgba(37, 99, 235, 0.4);
+    }
+
+    /* ===== FAQ ===== */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .faq-content.open { max-height: 300px; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* ===== TESTIMONIAL ===== */
+    .testimonial-card {
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 50px rgba(37, 99, 235, 0.1);
+    }
+
+    /* ===== IMAGE ===== */
+    img { transition: opacity 0.4s ease; }
+
+    /* ===== STAR ===== */
+    .star-filled { color: #c8a24e; }
+
+    /* ===== SECTION BG ===== */
+    .bg-surface-alt {
+      background: var(--surface-elevated);
+    }
+
+    /* ===== ICON BOX ===== */
+    .icon-box {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    /* ===== MARQUEE ===== */
+    .marquee-wrap { overflow: hidden; }
+    .marquee-track {
+      display: flex;
+      gap: 3rem;
+      animation: marquee 25s linear infinite;
+      width: max-content;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== SMOOTH UNDERLINE LINK ===== */
+    .nav-link {
+      position: relative;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--brand);
+      border-radius: 1px;
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover { color: #fff; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .section-padding { padding: clamp(2.5rem, 5vw, 5rem) 0; }
+    }
+    @media (max-width: 768px) {
+      .section-padding { padding: 2.5rem 0; }
+      .container-main { padding: 0 1.25rem; }
+      h1, .text-display { font-size: clamp(2rem, 7vw, 3rem) !important; }
+      h2, .text-heading { font-size: clamp(1.5rem, 5vw, 2.25rem) !important; }
+      .grid { gap: 1rem !important; }
+    }
+    @media (max-width: 480px) {
+      .section-padding { padding: 2rem 0; }
+      .btn-primary-lg { padding: 0.875rem 1.5rem; font-size: 0.9375rem; }
+      .glass-card { padding: 1.25rem !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================== -->
+  <!-- NAVBAR -->
+  <!-- ============================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 nav-transparent">
+    <div class="container-main">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-2.5">
+          <img src="assets/logo.png" alt="Clínica ON" class="h-[4.8rem] w-auto">
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#servicos" class="nav-link text-[0.8125rem] font-medium">Serviços</a>
+          <a href="#resultados" class="nav-link text-[0.8125rem] font-medium">Resultados</a>
+          <a href="#sobre" class="nav-link text-[0.8125rem] font-medium">Sobre</a>
+          <a href="#faq" class="nav-link text-[0.8125rem] font-medium">FAQ</a>
+          <a href="https://muv.marketing/on-salvador?utm_source=google&utm_medium=cpc&utm_campaign=institucional&utm_content=salvador" class="btn-primary" style="padding:0.625rem 1.25rem;font-size:0.8125rem;">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar avaliação
+          </a>
+        </div>
+
+        <button id="menuToggle" class="md:hidden text-neutral-700 p-2" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu fixed inset-y-0 right-0 w-[300px] bg-white/95 backdrop-blur-xl border-l border-neutral-100 z-50 p-8 flex flex-col">
+      <button id="menuClose" class="self-end text-neutral-400 hover:text-neutral-700 mb-8" aria-label="Fechar menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="flex flex-col gap-5">
+        <a href="#servicos" class="text-base text-neutral-700 hover:text-brand-500 transition-colors font-medium mobile-link">Serviços</a>
+        <a href="#resultados" class="text-base text-neutral-700 hover:text-brand-500 transition-colors font-medium mobile-link">Resultados</a>
+        <a href="#sobre" class="text-base text-neutral-700 hover:text-brand-500 transition-colors font-medium mobile-link">Sobre</a>
+        <a href="#faq" class="text-base text-neutral-700 hover:text-brand-500 transition-colors font-medium mobile-link">FAQ</a>
+        <a href="https://muv.marketing/on-salvador?utm_source=google&utm_medium=cpc&utm_campaign=institucional&utm_content=salvador" class="btn-primary justify-center mt-4">
+          Agendar avaliação de cortesia
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================== -->
+  <!-- HERO -->
+  <!-- ============================== -->
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+    <!-- Full-width banner image -->
+    <div class="absolute inset-0 z-0">
+      <img src="assets/banner.webp" alt="Clínica ON" fetchpriority="high" class="hero-banner-img w-full h-full object-cover transition-transform duration-0">
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(23,37,84,0.85) 0%, rgba(37,99,235,0.55) 50%, rgba(30,64,175,0.7) 100%);"></div>
+    </div>
+
+    <!-- Decorative shapes -->
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-white/[0.03] rounded-full translate-x-1/3 -translate-y-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/[0.04] rounded-full -translate-x-1/3 translate-y-1/3"></div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-28 pb-20">
+      <div class="max-w-2xl">
+        <!-- Rating badge -->
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-8 hero-fade-up hero-fade-up-1">
+          <span class="text-sm tracking-tight text-amber-400">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="text-sm text-white/80"><strong class="text-white">4,9</strong> &middot; 477 avaliações no Google</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-serif text-display mb-6 text-white drop-shadow-lg hero-fade-up hero-fade-up-2">
+          Cuide do seu<br>
+          <span style="background: linear-gradient(135deg, #93c5fd, #bfdbfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">sorriso</span> com quem<br>
+          <span class="italic">é especialista</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-lg text-white/70 max-w-lg mb-10 leading-relaxed hero-fade-up hero-fade-up-3">
+          Da limpeza de rotina ao implante, da estética à ortodontia: na Clínica ON você encontra <strong class="text-white">tratamento odontológico completo em um só lugar</strong>, com atendimento particular e humanizado em Salvador.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-8 hero-fade-up hero-fade-up-4">
+          <a href="https://muv.marketing/on-salvador?utm_source=google&utm_medium=cpc&utm_campaign=institucional&utm_content=salvador" class="btn-primary btn-primary-lg cta-pulse group" style="background:#2563eb;">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar avaliação de cortesia
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2 text-sm text-white/50 hero-fade-up hero-fade-up-5">
+          <svg class="w-4 h-4 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Salvador &middot; Cajazeiras
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+      <span class="text-[0.625rem] text-white/40 tracking-[0.2em] uppercase font-medium">Scroll</span>
+      <div class="w-5 h-9 rounded-full border-[1.5px] border-white/20 flex justify-center pt-2">
+        <div class="w-1 h-2.5 bg-blue-300 rounded-full animate-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================== -->
+  <!-- BRAND SHOWCASE -->
+  <!-- ============================== -->
+  <section class="section-padding">
+    <div class="container-main">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal-left">
+          <div class="relative">
+            <div class="bg-brand-50 rounded-3xl overflow-hidden">
+              <img src="assets/fachada-salvador.webp" alt="Fachada da Clínica ON" loading="lazy" class="w-full h-full object-cover">
+            </div>
+            <!-- Accent dot -->
+            <div class="absolute -top-4 -right-4 w-20 h-20 bg-brand-500/10 rounded-full"></div>
+            <div class="absolute -bottom-4 -left-4 w-14 h-14 bg-brand-500/10 rounded-full"></div>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <p class="label-text mb-4">Quem somos</p>
+          <h2 class="font-serif text-heading mb-6">
+            Excelência em <span class="text-gradient">odontologia</span> em Salvador
+          </h2>
+          <p class="text-neutral-500 leading-relaxed mb-6">
+            A Clínica ON nasceu com o propósito de reunir as melhores especialidades odontológicas em um único lugar. Nossa equipe combina tecnologia de ponta com atendimento humanizado para cuidar do seu sorriso com a atenção que ele merece.
+          </p>
+          <div class="flex gap-4">
+            <div class="text-center">
+              <p class="text-3xl font-bold text-brand-500">+10</p>
+              <p class="text-xs text-neutral-400 mt-1">Especialidades</p>
+            </div>
+            <div class="w-px bg-neutral-150"></div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-brand-500">4,9</p>
+              <p class="text-xs text-neutral-400 mt-1">Avaliação Google</p>
+            </div>
+            <div class="w-px bg-neutral-150"></div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-brand-500">477</p>
+              <p class="text-xs text-neutral-400 mt-1">Pacientes satisfeitos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-subtle"></div>
+
+
+  <!-- ============================== -->
+  <!-- PROBLEM SECTION -->
+  <!-- ============================== -->
+  <section class="section-padding">
+    <div class="container-main">
+      <div class="text-center mb-16 reveal">
+        <p class="label-text mb-4">Não espere mais</p>
+        <h2 class="font-serif text-heading mb-4">
+          Por que adiar o cuidado<br>com <span class="text-gradient">seus dentes</span>?
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger">
+        <div class="glass-card rounded-2xl p-7 reveal" style="--i:0">
+          <div class="icon-box bg-red-50 mb-5">
+            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-neutral-900 mb-2">Dor ou sensibilidade</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">Sente dor ou sensibilidade e vem <strong class="text-neutral-700">adiando</strong> ir ao dentista.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 reveal" style="--i:1">
+          <div class="icon-box bg-amber-50 mb-5">
+            <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-neutral-900 mb-2">Insegurança nas fotos</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">Não gosta do seu sorriso nas fotos.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 reveal" style="--i:2">
+          <div class="icon-box bg-blue-50 mb-5">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-neutral-900 mb-2">Tempo sem check-up</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">Faz tempo que não faz uma limpeza ou check-up.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 reveal" style="--i:3">
+          <div class="icon-box bg-purple-50 mb-5">
+            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+          </div>
+          <h3 class="font-semibold text-neutral-900 mb-2">Tratamento parado</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">Tem um tratamento que começou e <strong class="text-neutral-700">parou pela metade</strong>.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <p class="text-lg text-neutral-600 mb-6">Na Clínica ON você resolve tudo em um lugar só.</p>
+        <a href="https://muv.marketing/on-salvador?utm_source=google&utm_medium=cpc&utm_campaign=institucional&utm_content=salvador" class="btn-primary group">
+          Quero resolver meu caso
+          <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-subtle"></div>
+
+
+  <!-- ============================== -->
+  <!-- SERVICES -->
+  <!-- ============================== -->
+  <section id="servicos" class="section-padding">
+    <div class="container-main">
+      <div class="text-center mb-16 reveal">
+        <p class="label-text mb-4">Serviços</p>
+        <h2 class="font-serif text-heading mb-4">
+          Tudo o que o seu<br><span class="text-gradient">sorriso precisa</span>
+        </h2>
+        <p class="text-neutral-500 max-w-xl mx-auto">Equipe especializada e estrutura própria para cuidar da sua saúde bucal do começo ao fim.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger">
+        <div class="glass-card rounded-2xl p-7 overflow-hidden relative group reveal" style="--i:0">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-brand-50 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="relative">
+            <div class="icon-box bg-brand-50 mb-5">
+              <svg class="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.24 2 7 4.24 7 7c0 1.52.68 2.87 1.75 3.79L12 22l3.25-11.21C16.32 9.87 17 8.52 17 7c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z"/><path d="M12 2C9.24 2 7 4.24 7 7c0 1.52.68 2.87 1.75 3.79L12 22l3.25-11.21C16.32 9.87 17 8.52 17 7c0-2.76-2.24-5-5-5zm-1 5V4.5C11 3.67 11.67 3 12.5 3S14 3.67 14 4.5V7h2.5c.83 0 1.5.67 1.5 1.5S17.33 10 16.5 10H14v2.5c0 .83-.67 1.5-1.5 1.5S11 13.33 11 12.5V10H8.5C7.67 10 7 9.33 7 8.5S7.67 7 8.5 7H11z"/></svg>
+            </div>
+            <h3 class="font-semibold text-neutral-900 mb-2">Implantes e próteses</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Dentes fixos de volta, inclusive prótese protocolo.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 overflow-hidden relative group reveal" style="--i:1">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-accent-goldLight rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="relative">
+            <div class="icon-box bg-accent-goldLight mb-5">
+              <svg class="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.24 2 7 4.24 7 7c0 1.52.68 2.87 1.75 3.79L12 22l3.25-11.21C16.32 9.87 17 8.52 17 7c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4zM7.5 3C6.12 3 5 4.12 5 5.5S6.12 8 7.5 8 10 6.88 10 5.5 8.88 3 7.5 3zm9 0C15.12 3 14 4.12 14 5.5S15.12 8 16.5 8 19 6.88 19 5.5 17.88 3 16.5 3z"/></svg>
+            </div>
+            <h3 class="font-semibold text-neutral-900 mb-2">Lentes, facetas e clareamento</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Um sorriso mais bonito e harmônico.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 overflow-hidden relative group reveal" style="--i:2">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="relative">
+            <div class="icon-box bg-blue-50 mb-5">
+              <svg class="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.24 2 7 4.24 7 7c0 1.52.68 2.87 1.75 3.79L12 22l3.25-11.21C16.32 9.87 17 8.52 17 7c0-2.76-2.24-5-5-5zm-2 4h4v1h-4V6zm0 2h4v1h-4V8zm0 2h3v1h-9V10z"/></svg>
+            </div>
+            <h3 class="font-semibold text-neutral-900 mb-2">Ortodontia</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Alinhe os dentes com aparelho ou alinhadores.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 overflow-hidden relative group reveal" style="--i:3">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-purple-50 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="relative">
+            <div class="icon-box bg-purple-50 mb-5">
+              <svg class="w-6 h-6 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.24 2 7 4.24 7 7c0 1.52.68 2.87 1.75 3.79L12 22l3.25-11.21C16.32 9.87 17 8.52 17 7c0-2.76-2.24-5-5-5zm-1 4a1 1 0 112 0 1 1 0 01-2 0zm1 3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            </div>
+            <h3 class="font-semibold text-neutral-900 mb-2">Clínica geral, canal e prevenção</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Limpeza, restauração, canal e check-up de rotina.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================== -->
+  <!-- VIDEO SHOWCASE -->
+  <!-- ============================== -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-main">
+      <div class="text-center mb-12 reveal">
+        <p class="label-text mb-4">Conheça a clínica</p>
+        <h2 class="font-serif text-heading">Veja de perto <span class="text-gradient">como trabalhamos</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="reveal-left" style="--i:0">
+          <div class="rounded-2xl overflow-hidden aspect-[9/16] relative group shadow-lg">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <source src="assets/video1.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="text-sm font-semibold text-white">Nossa estrutura</p>
+              <p class="text-xs text-white/60">Conheça a clínica</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-scale" style="--i:1">
+          <div class="rounded-2xl overflow-hidden aspect-[9/16] relative group shadow-lg">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <source src="assets/video2.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="text-sm font-semibold text-white">Atendimento</p>
+              <p class="text-xs text-white/60">Humanizado e completo</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right" style="--i:2">
+          <div class="rounded-2xl overflow-hidden aspect-[9/16] relative group shadow-lg">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <source src="assets/video3.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="text-sm font-semibold text-white">Resultados</p>
+              <p class="text-xs text-white/60">Transformações reais</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================== -->
+  <!-- BRAND IDENTITY / TRUST BAR -->
+  <!-- ============================== -->
+  <section class="py-16" style="background: linear-gradient(135deg, #172554 0%, #2563eb 50%, #1e40af 100%);">
+    <div class="container-main">
+      <div class="grid md:grid-cols-4 gap-8 items-center text-center">
+        <div class="reveal" style="--i:0">
+          <img src="assets/logo.png" alt="Clínica ON" class="h-28 w-auto mx-auto mb-3 drop-shadow-lg">
+          <p class="text-white/60 text-xs font-medium tracking-wider uppercase">Odontologia Especializada</p>
+        </div>
+        <div class="reveal" style="--i:1">
+          <p class="text-4xl font-bold text-white mb-1 counter-num" data-target="477">0</p>
+          <p class="text-white/50 text-sm">Avaliações no Google</p>
+        </div>
+        <div class="reveal" style="--i:2">
+          <p class="text-4xl font-bold text-white mb-1">4,9 <span class="text-2xl">&#9733;</span></p>
+          <p class="text-white/50 text-sm">Nota dos pacientes</p>
+        </div>
+        <div class="reveal" style="--i:3">
+          <p class="text-4xl font-bold text-white mb-1">100%</p>
+          <p class="text-white/50 text-sm">Atendimento particular</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================== -->
+  <!-- BEFORE/AFTER -->
+  <!-- ============================== -->
+  <section id="resultados" class="section-padding">
+    <div class="container-main">
+      <div class="text-center mb-16 reveal">
+        <p class="label-text mb-4">Resultados</p>
+        <h2 class="font-serif text-heading mb-4">
+          Resultados <span class="text-gradient">reais</span> de pacientes<br>da Clínica ON
+        </h2>
+        <p class="text-neutral-500 max-w-xl mx-auto">Transformações de quem confiou o sorriso à nossa equipe.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="reveal-left" style="--i:0">
+          <div class="ba-slider aspect-[4/3] shadow-lg" data-ba>
+            <img src="assets/ad1.webp" alt="Antes" loading="lazy" class="w-full h-full object-cover">
+            <div class="ba-before" style="width:50%">
+              <img src="assets/ad1.webp" alt="Depois" class="w-full h-full object-cover" style="width:unset;min-width:100%;filter:hue-rotate(15deg) brightness(1.1);">
+            </div>
+            <div class="ba-divider" style="left:50%">
+              <div class="ba-handle">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 bg-neutral-900/70 backdrop-blur-sm rounded-full px-3 py-1 text-[0.6875rem] font-semibold text-white z-10">ANTES</div>
+            <div class="absolute top-3 right-3 bg-brand-500/80 backdrop-blur-sm rounded-full px-3 py-1 text-[0.6875rem] font-semibold text-white z-10">DEPOIS</div>
+          </div>
+        </div>
+        <div class="reveal-right" style="--i:1">
+          <div class="ba-slider aspect-[4/3] shadow-lg" data-ba>
+            <img src="assets/ad2.webp" alt="Antes" loading="lazy" class="w-full h-full object-cover">
+            <div class="ba-before" style="width:50%">
+              <img src="assets/ad2.webp" alt="Depois" class="w-full h-full object-cover" style="width:unset;min-width:100%;filter:hue-rotate(15deg) brightness(1.1);">
+            </div>
+            <div class="ba-divider" style="left:50%">
+              <div class="ba-handle">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 bg-neutral-900/70 backdrop-blur-sm rounded-full px-3 py-1 text-[0.6875rem] font-semibold text-white z-10">ANTES</div>
+            <div class="absolute top-3 right-3 bg-brand-500/80 backdrop-blur-sm rounded-full px-3 py-1 text-[0.6875rem] font-semibold text-white z-10">DEPOIS</div>
+          </div>
+        </div>
+        <div class="reveal-left" style="--i:2">
+          <div class="ba-slider aspect-[4/3] shadow-lg" data-ba>
+            <img src="assets/ad3.webp" alt="Antes" loading="lazy" class="w-full h-full object-cover">
+            <div class="ba-before" style="width:50%">
+              <img src="assets/ad3.webp" alt="Depois" class="w-full h-full object-cover" style="width:unset;min-width:100%;filter:hue-rotate(15deg) brightness(1.1);">
+            </div>
+            <div class="ba-divider" style="left:50%">
+              <div class="ba-handle">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 bg-neutral-900/70 backdrop-blur-sm rounded-full px-3 py-1 text-[0.6875rem] font-semibold text-white z-10">ANTES</div>
+            <div class="absolute top-3 right-3 bg-brand-500/80 backdrop-blur-sm rounded-full px-3 py-1 text-[0.6875rem] font-semibold text-white z-10">DEPOIS</div>
+          </div>
+        </div>
+        <div class="reveal-right" style="--i:3">
+          <div class="ba-slider aspect-[4/3] shadow-lg" data-ba>
+            <img src="assets/ad4.webp" alt="Antes" loading="lazy" class="w-full h-full object-cover">
+            <div class="ba-before" style="width:50%">
+              <img src="assets/ad4.webp" alt="Depois" class="w-full h-full object-cover" style="width:unset;min-width:100%;filter:hue-rotate(15deg) brightness(1.1);">
+            </div>
+            <div class="ba-divider" style="left:50%">
+              <div class="ba-handle">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/></svg>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3 bg-neutral-900/70 backdrop-blur-sm rounded-full px-3 py-1 text-[0.6875rem] font-semibold text-white z-10">ANTES</div>
+            <div class="absolute top-3 right-3 bg-brand-500/80 backdrop-blur-sm rounded-full px-3 py-1 text-[0.6875rem] font-semibold text-white z-10">DEPOIS</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-xs text-neutral-300 mt-8">Imagens reais de pacientes, publicadas com autorização. Os resultados variam de acordo com cada caso.</p>
+    </div>
+  </section>
+
+  <div class="divider-subtle"></div>
+
+
+  <!-- ============================== -->
+  <!-- WHY CHOOSE US -->
+  <!-- ============================== -->
+  <section id="sobre" class="section-padding bg-surface-alt">
+    <div class="container-main">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal-left">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-brand-500/5 rounded-3xl blur-3xl"></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img src="assets/sobre.jfif" alt="Clínica ON" loading="lazy" class="w-full h-[480px] object-cover">
+            </div>
+            <div class="absolute -bottom-5 -right-5 bg-white rounded-2xl p-5 shadow-xl border border-neutral-100 float-badge">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">&#11088;</span>
+                <div>
+                  <p class="text-2xl font-bold text-accent-gold counter-num" data-target="4.9">0</p>
+                  <p class="text-xs text-neutral-400">no Google</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <p class="label-text mb-4">Por que nos escolher</p>
+          <h2 class="font-serif text-heading mb-10">
+            A clínica que<br><span class="text-gradient">transforma sorrisos</span>
+          </h2>
+
+          <div class="space-y-7">
+            <div class="flex gap-4 group">
+              <div class="icon-box bg-brand-50 group-hover:bg-brand-100 transition-colors">
+                <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-neutral-900 mb-1">Odontologia especializada</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed">Várias especialidades reunidas para resolver o seu caso por completo.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 group">
+              <div class="icon-box bg-accent-goldLight group-hover:bg-amber-100 transition-colors">
+                <svg class="w-5 h-5 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-neutral-900 mb-1">Atendimento particular e humanizado</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed">Plano de tratamento sob medida, no seu ritmo.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 group">
+              <div class="icon-box bg-blue-50 group-hover:bg-blue-100 transition-colors">
+                <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-neutral-900 mb-1">Estrutura própria em Salvador</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed">Unidade em Cajazeiras, fácil acesso.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 group">
+              <div class="icon-box bg-purple-50 group-hover:bg-purple-100 transition-colors">
+                <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-neutral-900 mb-1">Equipe de confiança</h3>
+                <p class="text-sm text-neutral-500 leading-relaxed">4,9 estrelas e 477 avaliações de pacientes no Google.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-subtle"></div>
+
+
+  <!-- ============================== -->
+  <!-- HOW IT WORKS -->
+  <!-- ============================== -->
+  <section class="section-padding">
+    <div class="container-main">
+      <div class="text-center mb-16 reveal">
+        <p class="label-text mb-4">Processo</p>
+        <h2 class="font-serif text-heading">Como <span class="text-gradient">funciona</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 stagger">
+        <div class="relative reveal" style="--i:0">
+          <div class="glass-card rounded-2xl p-8 text-center h-full">
+            <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-6 relative">
+              <span class="text-2xl font-bold text-brand-500">1</span>
+              <div class="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center shadow-sm">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+            </div>
+            <h3 class="font-semibold text-neutral-900 mb-3">Avaliação de cortesia</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Conversamos pelo WhatsApp e agendamos sua avaliação na clínica.</p>
+          </div>
+          <div class="hidden md:block absolute top-1/2 -right-3 z-10">
+            <svg class="w-6 h-6 text-neutral-200" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </div>
+        </div>
+
+        <div class="relative reveal" style="--i:1">
+          <div class="glass-card rounded-2xl p-8 text-center h-full animated-border">
+            <div class="w-16 h-16 rounded-full bg-accent-goldLight flex items-center justify-center mx-auto mb-6 relative">
+              <span class="text-2xl font-bold text-accent-gold">2</span>
+              <div class="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-accent-gold flex items-center justify-center shadow-sm">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+              </div>
+            </div>
+            <h3 class="font-semibold text-neutral-900 mb-3">Plano personalizado</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Avaliamos seu caso e montamos o tratamento ideal para você.</p>
+          </div>
+          <div class="hidden md:block absolute top-1/2 -right-3 z-10">
+            <svg class="w-6 h-6 text-neutral-200" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </div>
+        </div>
+
+        <div class="reveal" style="--i:2">
+          <div class="glass-card rounded-2xl p-8 text-center h-full">
+            <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-6 relative">
+              <span class="text-2xl font-bold text-brand-500">3</span>
+              <div class="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center shadow-sm">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+            </div>
+            <h3 class="font-semibold text-neutral-900 mb-3">Sorriso renovado</h3>
+            <p class="text-sm text-neutral-500 leading-relaxed">Você cuida do que precisa e recupera a saúde e a confiança do seu sorriso.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <a href="https://muv.marketing/on-salvador?utm_source=google&utm_medium=cpc&utm_campaign=institucional&utm_content=salvador" class="btn-primary btn-primary-lg cta-pulse group">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar avaliação de cortesia
+          <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================== -->
+  <!-- FAQ -->
+  <!-- ============================== -->
+  <section id="faq" class="section-padding bg-surface-alt">
+    <div class="max-w-2xl mx-auto px-5">
+      <div class="text-center mb-14 reveal">
+        <p class="label-text mb-4">Dúvidas</p>
+        <h2 class="font-serif text-heading">Perguntas <span class="text-gradient">frequentes</span></h2>
+      </div>
+
+      <div class="space-y-3 stagger">
+        <div class="faq-item glass-card rounded-xl overflow-hidden reveal" style="--i:0">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+            <span class="font-semibold text-neutral-900 pr-4 text-[0.9375rem]">Quais tratamentos a Clínica ON faz?</span>
+            <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-brand-50 flex items-center justify-center text-brand-500 text-xl leading-none">+</span>
+          </button>
+          <div class="faq-content">
+            <div class="px-5 pb-5 text-sm text-neutral-500 leading-relaxed">
+              Atendemos de forma completa: implantes e próteses, lentes e facetas, clareamento, ortodontia (aparelho/alinhadores), tratamento de canal, restaurações, limpeza e prevenção. Na avaliação indicamos o que é melhor para o seu caso.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card rounded-xl overflow-hidden reveal" style="--i:1">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+            <span class="font-semibold text-neutral-900 pr-4 text-[0.9375rem]">Preciso marcar avaliação antes?</span>
+            <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-brand-50 flex items-center justify-center text-brand-500 text-xl leading-none">+</span>
+          </button>
+          <div class="faq-content">
+            <div class="px-5 pb-5 text-sm text-neutral-500 leading-relaxed">
+              Sim. A avaliação é o ponto de partida para entendermos a sua necessidade e montarmos um plano personalizado. Você agenda pelo WhatsApp em poucos minutos.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card rounded-xl overflow-hidden reveal" style="--i:2">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+            <span class="font-semibold text-neutral-900 pr-4 text-[0.9375rem]">Dá para parcelar?</span>
+            <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-brand-50 flex items-center justify-center text-brand-500 text-xl leading-none">+</span>
+          </button>
+          <div class="faq-content">
+            <div class="px-5 pb-5 text-sm text-neutral-500 leading-relaxed">
+              Sim. O atendimento é particular e as condições de pagamento são apresentadas durante a avaliação, de acordo com o seu plano de tratamento.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card rounded-xl overflow-hidden reveal" style="--i:3">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+            <span class="font-semibold text-neutral-900 pr-4 text-[0.9375rem]">Vocês atendem por convênio?</span>
+            <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-brand-50 flex items-center justify-center text-brand-500 text-xl leading-none">+</span>
+          </button>
+          <div class="faq-content">
+            <div class="px-5 pb-5 text-sm text-neutral-500 leading-relaxed">
+              Não. A Clínica ON trabalha exclusivamente com atendimento particular, o que permite um plano totalmente personalizado.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card rounded-xl overflow-hidden reveal" style="--i:4">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" aria-expanded="false">
+            <span class="font-semibold text-neutral-900 pr-4 text-[0.9375rem]">Onde fica a clínica?</span>
+            <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-brand-50 flex items-center justify-center text-brand-500 text-xl leading-none">+</span>
+          </button>
+          <div class="faq-content">
+            <div class="px-5 pb-5 text-sm text-neutral-500 leading-relaxed">
+              Estamos em Cajazeiras, Salvador-BA, com estrutura própria e fácil acesso. O endereço e o mapa estão logo abaixo nesta página.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-subtle"></div>
+
+
+  <!-- ============================== -->
+  <!-- LOCATION -->
+  <!-- ============================== -->
+  <section class="section-padding">
+    <div class="container-main">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal-left">
+          <p class="label-text mb-4">Localização</p>
+          <h2 class="font-serif text-heading mb-8">
+            Venha nos <span class="text-gradient">conhecer</span>
+          </h2>
+
+          <div class="space-y-5 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="icon-box bg-brand-50">
+                <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-neutral-900 mb-0.5">Endereço</h3>
+                <p class="text-sm text-neutral-500">Av. Engenheiro Raymundo Carlos Nery, 8 — Cajazeiras X, Salvador-BA</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="icon-box bg-brand-50">
+                <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-neutral-900 mb-0.5">Telefone</h3>
+                <p class="text-sm text-neutral-500">(71) 3305-2303 · (71) 99120-8138</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://muv.marketing/on-salvador?utm_source=google&utm_medium=cpc&utm_campaign=institucional&utm_content=salvador" class="btn-primary group">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar avaliação de cortesia
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <div class="reveal-right">
+          <div class="rounded-2xl overflow-hidden border border-neutral-150 shadow-sm">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d-38.46!3d-12.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzEyLjAiUyAzOMKwMjcnMzYuMCJX!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr&q=Av.+Eng.+Raymundo+Carlos+Nery,+8+Cajazeiras+Salvador+BA" width="100%" height="420" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================== -->
+  <!-- FINAL CTA -->
+  <!-- ============================== -->
+  <section class="section-padding relative overflow-hidden min-h-[70vh] flex items-center">
+    <!-- Background image -->
+    <div class="absolute inset-0 z-0">
+      <img src="assets/mulher.jpg" alt="" loading="lazy" class="w-full h-full object-cover">
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(23,37,84,0.88) 0%, rgba(37,99,235,0.7) 50%, rgba(30,64,175,0.85) 100%);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-5 text-center">
+      <div class="reveal">
+        <h2 class="font-serif text-display mb-6 text-white drop-shadow-lg">
+          Pronto para ter o<br><span style="background: linear-gradient(135deg, #93c5fd, #bfdbfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">sorriso que você merece</span>?
+        </h2>
+        <p class="text-lg text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">
+          Agende sua avaliação de cortesia agora mesmo pelo WhatsApp. É rápido, fácil e sem compromisso.
+        </p>
+        <a href="https://muv.marketing/on-salvador?utm_source=google&utm_medium=cpc&utm_campaign=institucional&utm_content=salvador" class="btn-primary btn-primary-lg cta-pulse group" style="background:#2563eb;">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar avaliação de cortesia
+          <svg class="w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================== -->
+  <!-- FOOTER -->
+  <!-- ============================== -->
+  <footer class="border-t border-neutral-100 py-10">
+    <div class="container-main">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Clínica ON" class="h-14 w-auto opacity-60">
+          <span class="text-xs text-neutral-400">Clínica ON — Odontologia Especializada</span>
+        </div>
+        <p class="text-xs text-neutral-300 text-center md:text-right">
+          Responsável Técnico: Dr. Wilton Souza Rêgo Netto — CRO-BA 12643
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================== -->
+  <!-- FLOATING WHATSAPP -->
+  <!-- ============================== -->
+  <a href="https://muv.marketing/on-salvador?utm_source=google&utm_medium=cpc&utm_campaign=institucional&utm_content=salvador" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/20 hover:scale-110 transition-transform" aria-label="WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+
+  <!-- ============================== -->
+  <!-- JAVASCRIPT -->
+  <!-- ============================== -->
+  <script>
+    // Scroll Reveal
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    const handleNav = () => {
+      const scrolled = window.pageYOffset > 60;
+      navbar.classList.toggle('nav-scrolled', scrolled);
+      navbar.classList.toggle('nav-transparent', !scrolled);
+    };
+    window.addEventListener('scroll', handleNav, { passive: true });
+    handleNav();
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    menuToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
+    menuClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+
+    // FAQ
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-content').classList.remove('open');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          content.classList.add('open');
+        }
+      });
+    });
+
+    // Counter
+    document.querySelectorAll('.counter-num').forEach(el => {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = parseFloat(el.dataset.target);
+            const isDecimal = target % 1 !== 0;
+            const start = performance.now();
+            const animate = (now) => {
+              const p = Math.min((now - start) / 1800, 1);
+              const eased = 1 - Math.pow(1 - p, 3);
+              el.textContent = isDecimal ? (target * eased).toFixed(1) : Math.floor(target * eased);
+              if (p < 1) requestAnimationFrame(animate);
+            };
+            requestAnimationFrame(animate);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      obs.observe(el);
+    });
+
+    // Before/After sliders
+    document.querySelectorAll('[data-ba]').forEach(slider => {
+      let dragging = false;
+      const before = slider.querySelector('.ba-before');
+      const divider = slider.querySelector('.ba-divider');
+      const update = (x) => {
+        const r = slider.getBoundingClientRect();
+        const pct = Math.max(5, Math.min(95, ((x - r.left) / r.width) * 100));
+        before.style.width = pct + '%';
+        divider.style.left = pct + '%';
+      };
+      slider.addEventListener('mousedown', (e) => { dragging = true; update(e.clientX); });
+      document.addEventListener('mousemove', (e) => { if (dragging) update(e.clientX); });
+      document.addEventListener('mouseup', () => dragging = false);
+      slider.addEventListener('touchstart', (e) => { dragging = true; update(e.touches[0].clientX); });
+      document.addEventListener('touchmove', (e) => { if (dragging) update(e.touches[0].clientX); });
+      document.addEventListener('touchend', () => dragging = false);
+    });
+
+    // Smooth scroll with offset for fixed navbar
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+        // Close mobile menu if open
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Hero parallax
+    const heroImg = document.querySelector('.hero-banner-img');
+    if (heroImg) {
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        if (scrolled < window.innerHeight) {
+          heroImg.style.transform = `translateY(${scrolled * 0.3}px) scale(1.05)`;
+        }
+      }, { passive: true });
+    }
+
+    // Tilt effect on service cards
+    document.querySelectorAll('.glass-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `translateY(-4px) perspective(800px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  </script>
+
+</body>
+</html>
